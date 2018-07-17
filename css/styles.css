@@ -16,8 +16,11 @@ body,td,th,p{
 body {
   display: grid;
 	background-color: #fdfdfd;
-  position:relative;
+  position: relative;
   grid-template-rows: 50px 1fr 50px;
+}
+body.inside {
+  grid-template-rows: 100px 1fr 50px;
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
@@ -48,10 +51,26 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 
 #maincontent {
   background-color: #f3f3f3;
-  display: grid;
   grid-row: 2;
+  display: grid;
   grid-template-rows: 45vh 1fr;
 }
+
+.inside #maincontent {
+  grid-template-rows: 40vh 1fr;
+}
+
+@media screen and (min-width: 861px) {
+  .inside #maincontent {
+    grid-template-rows: 100vh;
+  }
+
+  .inside #map-container {
+  }
+  .inside #restaurant-container {
+  }
+}
+
 #footer {
   grid-row: 3;
   background-color: #444;
@@ -91,7 +110,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 100%;
 }
 
 /* Display list items side by side */
@@ -178,7 +197,6 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -225,21 +243,16 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 50%;
+  position: relative;
+  grid-row: 1;
 }
 .inside #map {
   background-color: #ccc;
-  height: 100%;
-  width: 100%;
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
-  width: 50%;
+  position: relative;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -270,14 +283,22 @@ nav h1 a {
   text-transform: uppercase;
 	width: 90%;
 }
+#restaurant-container {
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: 50% 1fr;
+}
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 50%;
+  padding: 50px 20px 30px;
+}
+#restaurant {
+  grid-row: 1;
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 20px 0 0 0;
+  grid-row: 2;
 }
 #reviews-container h2 {
   color: #f58500;
