@@ -57,30 +57,22 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 
 .inside #maincontent {
-  grid-template-rows: 40vh 1fr;
+  grid-template-rows: 45vh auto;
 }
 
-@media screen and (min-width: 861px) {
-  .inside #maincontent {
-    grid-template-rows: 100vh;
-  }
 
-  .inside #map-container {
-  }
-  .inside #restaurant-container {
-  }
-}
+
 
 #footer {
   grid-row: 3;
   background-color: #444;
-  color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px 0;
   text-align: center;
-  text-transform: uppercase;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -89,15 +81,19 @@ nav {
   background-color: #252831;
   text-align: center;
 }
-nav h1 {
+nav h1, nav h2 {
   margin: auto;
 }
-nav h1 a {
+nav h1 a, nav h2 a {
   color: #fff;
   font-size: 14pt;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
+}
+
+nav h2 a {
+  font-size: 14px;
 }
 
 .nav-logo {
@@ -139,6 +135,7 @@ nav h1 a {
 /* ====================== Map ====================== */
 #map-container {
   grid-row: 1;
+  padding-right: 20px;
 }
 #map {
   height: 100%;
@@ -195,8 +192,11 @@ nav h1 a {
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
+  min-width: 150px;
+  max-width: 350px;
   padding: 0 30px 25px;
   text-align: left;
+  flex: auto;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -242,7 +242,7 @@ nav h1 a {
   z-index: 1000;
 }
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
+  background: #ccc none repeat scroll 0 0;
   position: relative;
   grid-row: 1;
 }
@@ -253,7 +253,15 @@ nav h1 a {
   bottom: 0;
   position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+#footer p { 
+  color: #aaa;
+}
+
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -298,7 +306,7 @@ nav h1 a {
 }
 #reviews-container {
   padding: 20px 0 0 0;
-  grid-row: 2;
+  grid-row: 6;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -318,7 +326,7 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 20px;
   position: relative;
   width: 85%;
 }
@@ -327,4 +335,29 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+@media screen and (min-width: 861px) {
+  .inside #maincontent {
+    grid-template-rows: 100vw;
+    grid-template-columns: 50% 50%;
+  }
+
+  .inside #map-container {
+    grid-column: 2;
+    height: 100vh;
+  }
+
+ #restaurant-container {
+    grid-row: 1;
+    grid-column: 1;
+    grid-template-rows: auto;
+    height: 100vh;
+    padding-top: 0;
+    border-bottom: none;
+  }
+
+  #restaurant-hours {
+    margin: 15px 0;
+  }
 }
