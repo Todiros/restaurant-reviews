@@ -4,6 +4,7 @@
 html, body {
   height: 100vh;
   width: 100vw;
+  background: #f3f3f3;
 }
 
 body,td,th,p{
@@ -135,7 +136,6 @@ nav h2 a {
 /* ====================== Map ====================== */
 #map-container {
   grid-row: 1;
-  padding-right: 20px;
 }
 #map {
   height: 100%;
@@ -343,9 +343,20 @@ nav h2 a {
     grid-template-columns: 50% 50%;
   }
 
+  #map-container {
+    padding-right: 20px;
+  }
+
   .inside #map-container {
-    grid-column: 2;
+    grid-column: 2; 
     height: 100vh;
+    width: 100%;
+    padding: 0;
+  }
+
+  .inside #map {
+    position: fixed !important;
+    max-width: 100%;
   }
 
  #restaurant-container {
@@ -359,5 +370,12 @@ nav h2 a {
 
   #restaurant-hours {
     margin: 15px 0;
+  }
+  .inside #reviews-container {
+    padding: 10px 0 50px;
+  }
+  .inside #footer {
+    position: fixed;
+    height: 10px;
   }
 }
