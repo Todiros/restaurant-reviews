@@ -136,6 +136,7 @@ nav h2 a {
 /* ====================== Map ====================== */
 #map-container {
   grid-row: 1;
+  padding-right: 15px;
 }
 #map {
   height: 100%;
@@ -341,22 +342,19 @@ nav h2 a {
   .inside #maincontent {
     grid-template-rows: 100vw;
     grid-template-columns: 50% 50%;
-  }
-
-  #map-container {
-    padding-right: 20px;
+    overflow-x: hidden;
   }
 
   .inside #map-container {
     grid-column: 2; 
     height: 100vh;
     width: 100%;
-    padding: 0;
   }
 
   .inside #map {
     position: fixed !important;
     max-width: 100%;
+    padding: 0 10px 25px 0;
   }
 
  #restaurant-container {
