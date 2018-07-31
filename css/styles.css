@@ -381,6 +381,11 @@ nav h2 a {
   color: #666;
 }
 
+.inside nav h1 {
+  font-size: 15px;
+  line-height: 1.4em;
+}
+
 @media screen and (min-width: 861px){
   .inside #maincontent{
     -ms-grid-rows: 100vw;
