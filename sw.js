@@ -1,4 +1,4 @@
-const cacheName = 'cache_v3';
+const cacheName = 'cache_v1';
 const assets = [
   'index.html',
   'restaurant.html',
