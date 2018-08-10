@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Todiros/restaurant-reviews/issues"
   },
-  "homepage": "https://github.com/Todiros/restaurant-reviews#readme"
+  "homepage": "https://github.com/Todiros/restaurant-reviews#readme",
+  "devDependencies": {
+    "light-server": "^2.5.1"
+  }
 }
