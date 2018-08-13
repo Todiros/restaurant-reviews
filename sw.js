@@ -1,4 +1,4 @@
-const cacheName = 'cache_v1';
+const cacheName = 'cache_v2';
 const assets = [
   'index.html',
   'restaurant.html',
@@ -58,5 +58,9 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   console.log('Service Worker: Fetching...');
   
-  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)))
+  e.respondWith(() => {
+     const cachedResponse = caches.match(e.request);
+     if (cachedResponse) return cachedResponse;
+     return fetch(e.request);
+  });
 });
