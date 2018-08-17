@@ -9,10 +9,10 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     /* USE THIS WITH LIGHT SERVER */
-    const port = 7777 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
+//     const port = 7777 // Change this to your server port
+//     return `http://localhost:${port}/data/restaurants.json`;
     /* USE THIS WITH CODEANYWHERE */
-    // return `https://restaurant-reviews-todiros673420.codeanyapp.com/data/restaurants.json`;
+    return `https://restaurant-reviews-todiros673420.codeanyapp.com/data/restaurants.json`;
   }
 
   /**

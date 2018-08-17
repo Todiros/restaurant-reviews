@@ -154,7 +154,6 @@ nav h2 a {
 #map-container {
   -ms-grid-row: 1;
       grid-row: 1;
-  padding-right: 15px;
 }
 #map {
   height: 100%;
@@ -238,7 +237,7 @@ nav h2 a {
   min-height: 248px;
   min-width: 100%;
 }
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #803F00;
   font-family: Arial,sans-serif;
   font-size: 14pt;
