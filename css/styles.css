@@ -432,3 +432,12 @@ nav h2 a {
     height: 10px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .logoText {
+    font-size: 3vw;
+    line-height: 180%;
+  }
+}
+
+
